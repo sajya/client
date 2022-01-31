@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Sajya\Client;
 
-use Illuminate\Support\Collection;
 use Illuminate\Http\Client\PendingRequest;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 class Client
@@ -49,7 +49,7 @@ class Client
         $this->isBatch = false;
         $this->batch = [];
 
-        return $response->collect()->map(fn($content) => $this->prepareResponse(collect($content), $response));
+        return $response->collect()->map(fn ($content) => $this->prepareResponse(collect($content), $response));
     }
 
     /**
