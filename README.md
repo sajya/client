@@ -1,5 +1,6 @@
 ## Introduction
 
+>  **Warning**.   
 > This package is still under development and is not recommended for use in production.
 
 This package lets you set up a JSON-RPC client over HTTP(S), using your PHP code to make the requests. Built
