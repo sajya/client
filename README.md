@@ -1,5 +1,7 @@
 ## Introduction
 
+[![run-tests](https://github.com/sajya/client/actions/workflows/run-tests.yml/badge.svg)](https://github.com/sajya/client/actions/workflows/run-tests.yml)
+
 >  **Warning**.   
 > This package is still under development and is not recommended for use in production.
 
