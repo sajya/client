@@ -36,7 +36,7 @@ class Client
     /**
      * @param callable $callback
      *
-     * @return
+     * @return Collection
      */
     public function batch(callable $callback)
     {
@@ -49,7 +49,11 @@ class Client
         $this->isBatch = false;
         $this->batch = [];
 
-        return $response->collect()->map(fn ($content) => $this->prepareResponse(collect($content), $response));
+        return $response->collect()->mapWithKeys(function ($content) use ($response) {
+            $rpcResponse = $this->prepareResponse(collect($content), $response);
+
+            return [$rpcResponse->id() => $rpcResponse];
+        });
     }
 
     /**
