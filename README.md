@@ -7,6 +7,16 @@ This package lets you set up a JSON-RPC client over HTTP(S), using your PHP code
 around [Laravel](https://laravel.com/docs/8.x/http-client#introduction) expressive HTTP wrapper, it allows you to
 customize things like authorization, retries, and more.
 
+
+## Install
+
+Go to the project directory and run the command:
+
+```php
+$ composer require sajya/client
+```
+
+
 ## Usage
 
 ```php
