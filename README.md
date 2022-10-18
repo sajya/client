@@ -32,7 +32,7 @@ $response = $client->execute('tennis@ping');
 $response->result(); // pong
 ```
 
-By default, the request identifier will be generated using the UUID, you can get it by calling the `id()` method
+By default, the request identifier will be generated using the [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier), you can get it by calling the `id()` method
 
 ```php
 $response->id();
