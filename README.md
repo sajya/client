@@ -32,6 +32,20 @@ $response = $client->execute('tennis@ping');
 $response->result(); // pong
 ```
 
+By default, the request identifier will be generated using the UUID, you can get it by calling the `id()` method
+
+```php
+$response->id();
+```
+
+To get the result of an error, you need to call the `error()` method
+
+```php
+$response->error();
+```
+
+### Parameters
+
 Example with positional parameters:
 
 ```php
