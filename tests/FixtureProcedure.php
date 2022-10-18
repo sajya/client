@@ -7,7 +7,6 @@ namespace Sajya\Client\Tests;
 use Illuminate\Http\Request;
 use Sajya\Server\Exceptions\RuntimeRpcException;
 use Sajya\Server\Procedure;
-use Sajya\Server\Tests\Fixture\RenderResponseException;
 
 class FixtureProcedure extends Procedure
 {

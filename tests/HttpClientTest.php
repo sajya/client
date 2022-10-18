@@ -96,6 +96,5 @@ class HttpClientTest extends TestCase
 
             return Http::response(json_encode($response, JSON_THROW_ON_ERROR));
         });
-
     }
 }
