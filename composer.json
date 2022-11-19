@@ -1,5 +1,13 @@
 {
     "name": "sajya/client",
+    "type": "library",
+    "description": "HTTP client and server for JSON-RPC 2.0",
+    "keywords": [
+        "rpc",
+        "json-prc",
+        "api"
+    ],
+    "homepage": "https://sajya.github.io",
     "license": "MIT",
     "authors": [
         {
