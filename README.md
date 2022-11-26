@@ -3,7 +3,7 @@
 [![run-tests](https://github.com/sajya/client/actions/workflows/run-tests.yml/badge.svg)](https://github.com/sajya/client/actions/workflows/run-tests.yml)
 
 This package lets you set up a JSON-RPC client over HTTP(S), using your PHP code to make the requests. Built
-around [Laravel](https://laravel.com/docs/8.x/http-client#introduction) expressive HTTP wrapper, it allows you to
+around [Laravel](https://laravel.com/docs/8.x/http-client#introduction) (Doesn't require the entire framework, just its component) expressive HTTP wrapper, it allows you to
 customize things like authorization, retries, and more.
 
 
