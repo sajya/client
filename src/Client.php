@@ -102,6 +102,7 @@ class Client
 
         if ($this->isBatch) {
             $this->batch[] = $data;
+
             return $this;
         }
 
