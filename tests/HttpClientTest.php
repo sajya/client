@@ -52,7 +52,7 @@ class HttpClientTest extends TestCase
         $this->assertNotNull($response->error());
     }
 
-    public function testBathRequest(): void
+    public function testBatchRequest(): void
     {
         $batch = $this->getClient()->batch(function (Client $client) {
             $client->execute('fixture@sum', ['a' => 100, 'b' => 100], 'first');
@@ -67,6 +67,7 @@ class HttpClientTest extends TestCase
         $this->assertEquals(100, $batch->get('second')->result());
 
         $this->assertNotNull($batch->get('third')->error());
+        Http::assertSentCount(1);
     }
 
     /**
