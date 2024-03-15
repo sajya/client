@@ -11,16 +11,17 @@ on:
 
 jobs:
   test:
-
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, windows-latest, macos-latest ]
         php: [ 8.3, 8.2, 8.1, 8.0 ]
-        laravel: [ 11.* 10.*, 9.* ]
+        laravel: [ "11.*", "10.*", "9.*" ]
         dependency-version: [prefer-lowest, prefer-stable]
         include:
+          - laravel: 11.*
+            testbench: 9.*
           - laravel: 10.*
             testbench: 8.*
           - laravel: 9.*
