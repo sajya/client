@@ -3,14 +3,6 @@
          colors="true" processIsolation="false" stopOnFailure="false" stopOnError="false"
          xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd" cacheDirectory=".phpunit.cache"
          backupStaticProperties="false">
-    <coverage>
-        <include>
-            <directory suffix=".php">./src</directory>
-        </include>
-        <report>
-            <clover outputFile="clover.xml"/>
-        </report>
-    </coverage>
     <testsuites>
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests</directory>
