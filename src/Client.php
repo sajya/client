@@ -79,7 +79,7 @@ class Client
      *
      * @return \Sajya\Client\Response|void
      */
-    public function execute(string $method, array $params = null, string $id = null)
+    public function execute(string $method, ?array $params = null, ?string $id = null)
     {
         return $this->request($method, $params, $id ?? Str::uuid()->toString());
     }
@@ -91,7 +91,7 @@ class Client
      *
      * @return $this|\GuzzleHttp\Promise\PromiseInterface|\Illuminate\Http\Client\Response
      */
-    protected function request(string $method, ?array $params, string $id = null)
+    protected function request(string $method, ?array $params, ?string $id = null)
     {
         $data = collect([
             'jsonrpc' => '2.0',
