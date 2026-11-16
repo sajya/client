@@ -5,19 +5,12 @@ declare(strict_types=1);
 namespace Sajya\Client\Tests;
 
 use Illuminate\Http\Request;
+use Sajya\Server\Attributes\Procedure;
 use Sajya\Server\Exceptions\RuntimeRpcException;
-use Sajya\Server\Procedure;
 
-class FixtureProcedure extends Procedure
+#[Procedure('fixture')]
+class FixtureProcedure
 {
-    /**
-     * The name of the procedure that will be
-     * displayed and taken into account in the search.
-     *
-     * @var string
-     */
-    public static string $name = 'fixture';
-
     /**
      * @return string
      */

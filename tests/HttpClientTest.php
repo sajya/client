@@ -7,6 +7,7 @@ namespace Sajya\Client\Tests;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
 use Sajya\Client\Client;
+use Sajya\Server\App;
 
 class HttpClientTest extends TestCase
 {
@@ -88,11 +89,7 @@ class HttpClientTest extends TestCase
 
         Http::fake(function (Request $request) {
 
-            $app = class_exists(\Sajya\Server\App::class)
-                ? \Sajya\Server\App::class
-                : \Sajya\Server\Guide::class;
-
-            $guide = new $app([FixtureProcedure::class]);
+            $guide = new App([FixtureProcedure::class]);
             $response = $guide->terminate($request->body());
 
             return Http::response(json_encode($response, JSON_THROW_ON_ERROR));
